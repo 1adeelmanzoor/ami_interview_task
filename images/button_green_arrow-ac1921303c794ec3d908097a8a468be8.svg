@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="111px" height="87px" viewBox="0 0 111 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="button_bkg_arrow" fill-rule="nonzero">
+            <path d="M110.8,43.4 C110.8,19.5 91.3,0 67.4,0 C43.5,0 23.9,19.5 23.9,43.5 C23.9,55.9 23.1,86.9 7.10542736e-15,86.9 L67.4,86.9 C91.3,86.9 110.8,67.4 110.8,43.4 L110.8,43.4 Z" id="Path" fill="#1B6664"></path>
+            <path d="M68.5,43.4 L72.6,47.5 L65.6,54.6 C64.9,55.3 63.8,55.3 63.1,54.6 L61.5,53 C60.8,52.3 60.8,51.2 61.5,50.5 L68.5,43.4 Z" id="Path" fill="#E5E6EA"></path>
+            <path d="M63.1,32.3 L61.4,34 C60.7,34.7 60.7,35.8 61.4,36.5 L72.6,47.7 L75.5,44.8 C76.2,44.1 76.2,43 75.5,42.3 L65.6,32.4 C64.9,31.6 63.8,31.6 63.1,32.3 L63.1,32.3 Z" id="Path" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
