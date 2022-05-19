@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="dashoard.css">
+        <script type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="container-table">
+                <div class="wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><span class="wrapper-th">First_Name</span>
+                                </th>
+                                <th><span>Last_Name</span></th>
+                                <th><span>Email</span> </th>
+                                <th><span>Address</span> </th>
+                                <th><span>Phone_Number</span></th>
+                                <th><span>Roll_Number</span></th>
+                                <tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Projected</td>
+                                        <td>$820,180</td>
+                                        <td>$841,640</td>
+                                        <td>$732,270</td>
+
+                                        <td>$841,640</td>
+                                        <td>$732,270</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Actual</td>
+                                        <td>$850,730</td>
+                                        <td>$892,580</td>
+                                        <td>$801,240</td>
+
+                                        <td>$841,640</td>
+                                        <td>$732,270</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Utilization</td>
+                                        <td>83%</td>
+                                        <td>75%</td>
+                                        <td>$820,180</td>
+                                        <td>$841,640</td>
+                                        <td>$732,270</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                    <div class="container-aside">
+
+                        <div class="name-addstudent">
+                            <p class="name-addstudent__username"> user logged in</p>
+                            <button class="name-addstudent__add show-modal"> Add
+                                Student</button>
+                        </div>
+                        <p class="container-aside__rate">Student Rate</p>
+                        <div class="rate">
+                            <p class="rate__number">15</p>
+                            <p class="rate__lbl">Student count</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal hidden">
+                    <div>
+                        <div class="model-lbl-cross">
+                            <span class="model-lbl-cross__lbl">
+                                Add Student
+                            </span>
+                            <ion-icon class="model-lbl-cross__cross"
+                                name="close-outline"></ion-icon>
+                        </div>
+                        <div class="modal__stu-info">
+                            Student info
+                        </div>
+
+                        <form action="#">
+                            <div class="user-name-pass">
+                                <div class="user-name-pass-space">
+                                    <p class="user-name-pass-space__h">First
+                                        Name*</p>
+                                    <input
+                                        placeholder="Enter First Name" required
+                                        type="text">
+                                    <p class="user__validation">please
+                                        enter your first name</p>
+                                </div>
+                                <div class="user-name-pass-space">
+                                    <p class="user-name-pass-space__h">Last
+                                        Name*</p>
+                                    <input
+                                        placeholder="Enter Last Name"
+                                        required type="text">
+                                    <p class="user__validation">please
+                                        enter your last name</p>
+                                </div>
+                            </div>
+                            <div class="user-name-pass">
+                                <div class="user-name-pass-space">
+                                    <p class="user-name-pass-space__h">Email</p>
+                                    <input
+                                        placeholder="Email"
+                                        type="Email">
+                                    <p class="user__validation">please
+                                        enter your email</p>
+                                </div>
+                                <div class="user-name-pass-space">
+                                    <p class="user-name-pass-space__h">Address</p>
+                                    <input
+                                        placeholder="Address"
+                                        type="text">
+                                    <p class="user__validation">please
+                                        enter your address</p>
+                                </div>
+                            </div>
+                            <div class="user-name-pass">
+                                <div class="user-name-pass-space">
+                                    <p class="user-name-pass-space__h">Phone
+                                        Number</p>
+                                    <input
+                                        placeholder="Phone Number"
+                                        type="text">
+                                    <p class="user__validation">please
+                                        enter your phone number</p>
+                                </div>
+                                <div class="user-name-pass-space">
+                                    <p class="user-name-pass-space__h">Roll
+                                        Number</p>
+                                    <input
+                                        placeholder="Roll Number"
+                                        type="text">
+                                    <p class="user__validation">please
+                                        enter your roll number</p>
+                                </div>
+
+                            </div>
+
+                            <div class="model-btn">
+                                <button class="model-btn__cancel">
+                                    Cancel</button>
+                                <button class="model-btn__add">
+                                    Add
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="overlay hidden"></div>
+
+            </body>
+        </html>
