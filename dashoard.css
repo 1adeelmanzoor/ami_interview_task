@@ -118,7 +118,7 @@ table {
   text-align: center;
   font-size: 1.6rem;
 }
-.name-addstudent__add {
+.btn--design {
   line-height: normal;
   font-size: 1.2rem;
   width: 100%;
@@ -129,7 +129,9 @@ table {
   border: none;
   color: #fff;
   margin: 20px 0;
+  cursor: pointer;
 }
+
 .rate {
   width: 100%;
   display: flex;
@@ -180,9 +182,9 @@ table {
   border: none;
   background: none;
 }
-/* .hidden {
+.hidden {
   display: none;
-} */
+}
 .modal {
   position: absolute;
   top: 0;
@@ -283,6 +285,7 @@ input[type="email"] {
   border-radius: 5px;
   border: 1px solid #267c26;
   background-color: #fff;
+  cursor: pointer;
 }
 .model-btn__add {
   background-color: #267c26;
@@ -292,4 +295,35 @@ input[type="email"] {
   margin-left: 0.5rem;
   color: #fff;
   border-radius: 5px;
+  cursor: pointer;
+}
+.model-btn__edit {
+  background-color: #267c26;
+  border: none;
+  height: 35px;
+  width: 80px;
+  margin-left: 0.5rem;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#edit_data {
+  background-color: #267c26;
+  border: none;
+
+  width: 40px;
+  height: 20px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#delete_data {
+  background-color: #267c26;
+  border: none;
+
+  width: 40px;
+  height: 20px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
 }

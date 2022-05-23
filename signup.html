@@ -3,8 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=
-            , initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>signup </title>
         <link rel="stylesheet" href="signup.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,43 +25,47 @@
                         <h4 class="heading__login">Create Account</h4>
                     </div>
                     <div>
-                        <form action="#">
+                        <form>
                             <div class="user-name-pass">
                                 <div class="user-name-pass-space">
-                                    <input
+                                    <input class="firstname"
                                         placeholder="FirstName"
                                         required type="text">
                                     <p class="user__validation">please
                                         enter your first name</p>
                                 </div>
                                 <div class="user-name-pass-space">
-                                    <input
+                                    <input class="lastname"
                                         placeholder="LastName"
                                         required type="text">
                                     <p class="user__validation">please
                                         enter your last name</p>
                                 </div>
                             </div>
-                            <input placeholder="Username*"
+                            <input placeholder="phone number*"
+                                class="phonenumber" required type="text">
+                            <p class="user__validation">please
+                                enter your phone number</p>
+                            <input class="username" placeholder="Username*"
                                 required type="text">
                             <p class="user__validation">please
                                 enter your username</p>
-                            <input placeholder="Email Address*"
-                                required type="text">
+                            <input class="email" placeholder="Email Address*"
+                                required type="email">
                             <p class="user__validation">please
                                 enter your email address</p>
 
 
                             <div class="user-name-pass">
                                 <div class="user-name-pass-space">
-                                    <input
+                                    <input class="password"
                                         placeholder="Password*"
                                         required type="password">
                                     <p class="user__validation">please
                                         enter your password</p>
                                 </div>
                                 <div class="user-name-pass-space">
-                                    <input
+                                    <input class="confirmpassword"
                                         placeholder="Confirm password*"
                                         required type="password">
                                     <p class="user__validation">please
@@ -86,7 +89,9 @@
                             </div>
 
                             <input placeholder="Enter_activation code"
-                                required type="text">
+                                style="display: none;"
+                                class="activationcode hidden"
+                                type="text">
 
                             <div class="chk">
                                 <label class="chk__lbl">
@@ -134,7 +139,7 @@
                                 </a>
                                 <a href="https://www.linkedin.com/">
                                     <img class="social-img"
-                                        src="/images/linkedin.png">
+                                        src="./images/linkedin.png">
                                 </a>
 
                             </div>
@@ -144,7 +149,6 @@
             </div>
         </div>
 
-
-
+        <script src="main.js"></script>
     </body>
 </html>
