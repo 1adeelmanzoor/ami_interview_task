@@ -327,3 +327,31 @@ input[type="email"] {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* media query */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .container-aside {
+    width: 95%;
+    align-self: center;
+    height: auto;
+    border-radius: 5px;
+  }
+  .name-addstudent {
+    display: flex;
+    justify-content: space-between;
+  }
+  .user-log-in-out {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  .btn--design {
+    margin-left: 10px;
+  }
+  .container-table {
+    width: 95%;
+  }
+}

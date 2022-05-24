@@ -47,17 +47,18 @@ function saveData(e) {
   let userpassword = password.value;
   let usercpassword = cpassword.value;
   let useractivationcode = activationcode.value;
-
-  if (
-    (isNaN(userpnumber) && password.length < 6) ||
-    !uname ||
-    !email ||
-    !password ||
-    !cpassword
-  ) {
+  if (!userpnumber || !uname || !useremail || !userpassword || !usercpassword) {
     alert("Please Fill All Required Fields");
-    return false;
+    // validation
+  }
+  //  else if (userpnumber.length < 11) {
+  //   alert("11 less than");
+  // }
+  else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(useremail)) {
+    
+    alert("email not valid");
   } else {
+   
     users.push({
       lLname: lLname,
       fFname: fFname,
@@ -79,7 +80,7 @@ function saveData(e) {
     // });
 
     // toastList.forEach((toast) => toast.show());
-    document.querySelector("form").reset();
+    // document.querySelector("form").reset();
   }
   e.preventDefault();
 }
