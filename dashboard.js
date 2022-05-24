@@ -1,3 +1,5 @@
+// let editdata = document.querySelector("#edit_data");
+
 // .name-addstudent__add
 let addStudent = document.querySelector(".name-addstudent__add");
 let modal = document.querySelector(".modal");
@@ -32,15 +34,28 @@ const btnCloseModal = document.querySelector(".model-lbl-cross__cross");
 let url = "http://localhost:3000/student";
 
 function showModal() {
+  // modelbtnedit.classList.add("hidden");
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 }
+
+// checking edit
+
+function editData() {
+  showModal();
+  modelbtnedit.classList.remove("hidden");
+  postdata.classList.add("hidden");
+}
+
 function closeModal() {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 }
 
-addStudent.addEventListener("click", showModal);
+addStudent.addEventListener("click", () => {
+  showModal();
+  modelbtnedit.classList.add("hidden");
+});
 btnCloseModal.addEventListener("click", closeModal);
 
 document.querySelector(".name-addstudent__username").innerHTML = JSON.parse(
@@ -59,8 +74,8 @@ const renderPost = (post) => {
                     <td class="td_address">${element.Address}</td> 
                     <td class="td_phonenumber">${element.Phone_Number}</td> 
                     <td class="td_rollnumber">${element.Roll_number}</td> 
-                    <td><button id="edit_data" onclick="showModal()">edit</button>
-                    <button  id="delete_data">delete</button>
+                    <td><button id="edit_data" onclick="editData()">edit</button>
+                    <button id="delete_data">delete</button>
                     </td> 
                 </tr> `;
   });
@@ -165,3 +180,10 @@ logout.addEventListener("click", () => {
 
   window.location.href = "index.html";
 });
+
+// let editdata = document.querySelector("#edit_data");
+// console.log("hhhh", editdata);
+// editdata?.addEventListener("click", () => {
+//   // modelbtnedit.classList.remove("hidden");
+//   postdata.classList.add("hidden");
+// });
