@@ -47,18 +47,36 @@ function saveData(e) {
   let userpassword = password.value;
   let usercpassword = cpassword.value;
   let useractivationcode = activationcode.value;
-  if (!userpnumber || !uname || !useremail || !userpassword || !usercpassword) {
-    alert("Please Fill All Required Fields");
-    // validation
+  e.preventDefault();
+  if (isNaN(parseInt(userpnumber))) {
+    alert("not valid phone number ");
+    return false;
   }
-  //  else if (userpnumber.length < 11) {
-  //   alert("11 less than");
-  // }
-  else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(useremail)) {
-    
-    alert("email not valid");
+  if (uname.length <= 0) {
+    alert("user name is required");
+    return false;
+  }
+  if (
+    !useremail.match(
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    )
+  ) {
+    alert("user email is not valid");
+    return false;
+  }
+
+  if (userpassword.length <= 0) {
+    alert("user password is required");
+    return false;
+  }
+  if (usercpassword.length <= 0) {
+    alert("user confirm password is required");
+    return false;
+  }
+  if (userpassword.length !== usercpassword.length) {
+    alert("not match");
+    return false;
   } else {
-   
     users.push({
       lLname: lLname,
       fFname: fFname,
@@ -72,17 +90,7 @@ function saveData(e) {
 
     localStorage.setItem("users", JSON.stringify(users));
     alert("successfully sign up");
-    // toast
-
-    // var toastElList = [].slice.call(document.querySelectorAll(".toast"));
-    // var toastList = toastElList.map(function (toastEl) {
-    //   return new bootstrap.Toast(toastEl);
-    // });
-
-    // toastList.forEach((toast) => toast.show());
-    // document.querySelector("form").reset();
   }
-  e.preventDefault();
 }
 function closefield() {
   if (no.checked) {
@@ -105,7 +113,7 @@ function openfield(e) {
 // login page functions
 
 function getData(e) {
-  e.preventDefault();
+  // e.preventDefault();
   let users = JSON.parse(localStorage.getItem("users"));
 
   let activeUser = users.find((u) => u.pnumber === loginnumber.value);

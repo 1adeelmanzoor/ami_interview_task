@@ -38,7 +38,6 @@ function showModal() {
 function closeModal() {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
-  // document.querySelector("form").reset();
 }
 
 addStudent.addEventListener("click", showModal);
@@ -80,7 +79,6 @@ function loadTasks(e) {
 }
 
 function postData(e) {
-  // postdata.classList.remove("hidden");
   e.preventDefault();
 
   fetch("http://localhost:3000/student", {
@@ -126,7 +124,6 @@ tb.addEventListener("click", (e) => {
   }
   // edit row data
   if (editbtnIsPressed) {
-    // postdata.remove();
     let parent = e.target.parentElement.parentElement;
 
     let fnameContent = parent.querySelector(".td_firstname").textContent;
@@ -144,7 +141,6 @@ tb.addEventListener("click", (e) => {
     Rollnumber.value = rnumberContent;
 
     modelbtnedit.addEventListener("click", (e) => {
-      // document.querySelector(".model-btn__add").style.display = none;
       e.preventDefault();
 
       fetch(`${url}/${id}`, {
@@ -166,6 +162,6 @@ tb.addEventListener("click", (e) => {
 });
 logout.addEventListener("click", () => {
   localStorage.removeItem("activeUser");
-  //  document.querySelector('#activeUser').innerHTML="da";
+
   window.location.href = "index.html";
 });
