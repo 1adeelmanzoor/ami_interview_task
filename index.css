@@ -168,6 +168,8 @@ hr {
   height: 1px;
   color: var(--hr);
 }
+
+/* media  query  */
 @media (max-width: 1020px) {
   .align-item {
     display: flex;

@@ -65,7 +65,7 @@ function saveData(e) {
   //  password end check
 
   if (isNaN(parseInt(userpnumber))) {
-    alert("not valid phone number ");
+    alert("please enter phone number in digits");
     return false;
   }
   if (!isBetween(userpnumber.length, min, max)) {
@@ -82,13 +82,13 @@ function saveData(e) {
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     )
   ) {
-    alert("user email is not valid");
+    alert("user email is in formate 'exmple@gmail.com' ");
     return false;
   }
 
   if (!isPasswordSecure(userpassword)) {
     alert(
-      "Password must has at least 8 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)"
+      "Password must has at least 8-25 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)"
     );
     return false;
   }
@@ -138,6 +138,7 @@ function openfield(e) {
 
 function getData(e) {
   e.preventDefault();
+
   let users = JSON.parse(localStorage.getItem("users"));
 
   let activeUser = users.find(
@@ -155,7 +156,7 @@ function getData(e) {
       });
       document.querySelector("form").reset();
     } else {
-      alert("Wrong email or password");
+      alert("Wrong email or phone number or password");
     }
   } else {
     alert("User deos not exist.");

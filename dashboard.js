@@ -1,5 +1,3 @@
-// let editdata = document.querySelector("#edit_data");
-
 // .name-addstudent__add
 let addStudent = document.querySelector(".name-addstudent__add");
 let modal = document.querySelector(".modal");
@@ -34,7 +32,6 @@ const btnCloseModal = document.querySelector(".model-lbl-cross__cross");
 let url = "http://localhost:3000/student";
 
 function showModal() {
-  // modelbtnedit.classList.add("hidden");
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 }
@@ -180,10 +177,3 @@ logout.addEventListener("click", () => {
 
   window.location.href = "index.html";
 });
-
-// let editdata = document.querySelector("#edit_data");
-// console.log("hhhh", editdata);
-// editdata?.addEventListener("click", () => {
-//   // modelbtnedit.classList.remove("hidden");
-//   postdata.classList.add("hidden");
-// });
