@@ -1,158 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>signup </title>
-        <link rel="stylesheet" href="signup.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-            rel="stylesheet">
-    </head>
-    <body>
-        <div class="section">
-            <div class="container">
-                <div class="container-left">
-                    <img class="container-left__img" src="./images/BG.svg"
-                        alt="image not
-                        found">
-                </div>
-                <div class="container-right">
-                    <div class="heading">
-                        <h4 class="heading__login">Create Account</h4>
-                    </div>
-                    <div>
-                        <form>
-                            <div class="user-name-pass">
-                                <div class="user-name-pass-space">
-                                    <input class="firstname"
-                                        placeholder="FirstName"
-                                        required type="text">
-                                    <p class="user__validation">please
-                                        enter your first name</p>
-                                </div>
-                                <div class="user-name-pass-space">
-                                    <input class="lastname"
-                                        placeholder="LastName"
-                                        required type="text">
-                                    <p class="user__validation">please
-                                        enter your last name</p>
-                                </div>
-                            </div>
-                            <input placeholder="phone number*"
-                                class="phonenumber" required type="text">
-                            <p class="user__validation">please
-                                enter your phone number</p>
-                            <input class="username" placeholder="Username*"
-                                required type="text">
-                            <p class="user__validation">please
-                                enter your username</p>
-                            <input class="email" placeholder="Email Address*"
-                                required type="email">
-                            <p class="user__validation">please
-                                enter your email address</p>
-
-
-                            <div class="user-name-pass">
-                                <div class="user-name-pass-space">
-                                    <input class="password"
-                                        placeholder="Password*"
-                                        required type="password">
-                                    <p class="user__validation">please
-                                        enter your password</p>
-                                </div>
-                                <div class="user-name-pass-space">
-                                    <input class="confirmpassword"
-                                        placeholder="Confirm password*"
-                                        required type="password">
-                                    <p class="user__validation">please
-                                        match your password</p>
-                                </div>
-                            </div>
-
-
-                            <div class="code-yes-no align-item">
-                                <span>Do you have an activation code*</span>
-                                <div class="radio__btn">
-                                    <div>
-                                        <input type="radio" id="yes"
-                                            name="code">
-                                        <label class="code-yes-no__yes"
-                                            for="yes">Yes</label>
-                                    </div>
-                                    <div>
-                                        <input type="radio" id="no"
-                                            name="code">
-                                        <label for="no">No</label>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <input placeholder="Enter_activation code"
-                                style="display: none;"
-                                class="activationcode hidden"
-                                type="text">
-
-                            <div class="chk">
-                                <label class="chk__lbl">
-                                    <input type="checkbox" checked="checked">
-                                    <span class="checkmark"></span> I agree to
-                                    the
-                                    <a class="chk__policy"
-                                        href="https://www.wikipedia.org/"
-                                        target="_blank">Terms and Conditions</a>
-                                    and
-                                    <a class="chk__policy"
-                                        href="https://www.wikipedia.org/"
-                                        target="_blank"> Privacy Policy.</a>
-                                </label>
-                            </div>
-                            <p class="user__validation">Please accept our
-                                Terms and Conditions and Privacy Policy to
-                                proceed</p>
-
-                            <div class="btn align-item">
-                                <button class="btn--com
-                                    btn__create-account">CREATE
-                                    ACCOUNT</button>
-                                <div>
-                                    <span class="btn-login--lbl"> Have Already
-                                        an
-                                        Account?</span>
-                                    <a class="btn-login--already" href="#">Login
-                                        Here</a>
-                                </div>
-                            </div>
-                            <div class="social-label">
-                                <hr>
-                                <span class="social-heading">Or Create With</span>
-                                <hr>
-                            </div>
-                            <div class="link-align">
-                                <a href="https://www.facebook.com/">
-                                    <img class="social-img"
-                                        src="./images/facebook.png">
-                                </a>
-                                <a href="https://mail.google.com/">
-                                    <img class="social-img"
-                                        src="./images/gmail.png">
-                                </a>
-                                <a href="https://www.linkedin.com/">
-                                    <img class="social-img"
-                                        src="./images/linkedin.png">
-                                </a>
-
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup </title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet">
+  </head>
+  <body>
+    <div class="section">
+      <div class="container">
+        <div class="container-left">
+          <img class="container-left__img" src="./images/BG.svg"
+            alt="image not
+            found">
         </div>
+        <div class="container-right">
+          <div class="heading">
+            <h4 class="heading__login">Create Account</h4>
+          </div>
+          <div>
+            <form action="#">
+              <div class="user-name-pass">
+                <div class="user-name-pass-space">
+                  <input class="firstname"
+                    placeholder="FirstName"
+                    type="text">
+                  <p class="user__validation">please
+                    enter your first name</p>
+                </div>
+                <div class="user-name-pass-space">
+                  <input class="lastname"
+                    placeholder="LastName"
+                    type="text">
+                  <p class="user__validation">please
+                    enter your last name</p>
+                </div>
+              </div>
+              <input placeholder="phone number*"
+                class="phonenumber" required type="text">
+              <p class="user__validation">please
+                enter your phone number</p>
+              <input class="username" placeholder="Username*"
+                required type="text">
+              <p class="user__validation">please
+                enter your username</p>
+              <input class="email" placeholder="Email Address*"
+                required type="email">
+              <p class="user__validation">please
+                enter your email address</p>
 
-        <script src="main.js"></script>
-    </body>
+
+              <div class="user-name-pass">
+                <div class="user-name-pass-space">
+                  <input class="password"
+                    placeholder="Password*"
+                    required type="password">
+                  <p class="user__validation">please
+                    enter your password</p>
+                </div>
+                <div class="user-name-pass-space">
+                  <input class="confirmpassword"
+                    placeholder="Confirm password*"
+                    required type="password">
+                  <p class="user__validation">please
+                    match your password</p>
+                </div>
+              </div>
+
+
+              <div class="code-yes-no align-item">
+                <span>Do you have an activation code*</span>
+                <div class="radio__btn">
+                  <div>
+                    <input type="radio" id="yes"
+                      name="code">
+                    <label class="code-yes-no__yes"
+                      for="yes">Yes</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="no"
+                      name="code">
+                    <label for="no">No</label>
+                  </div>
+
+                </div>
+              </div>
+
+              <input placeholder="Enter_activation code"
+                style="display: none;"
+                class="activationcode hidden"
+                type="text">
+
+              <div class="chk">
+                <label class="chk__lbl">
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span> I agree to
+                  the
+                  <a class="chk__policy"
+                    href="https://www.wikipedia.org/"
+                    target="_blank">Terms and Conditions</a>
+                  and
+                  <a class="chk__policy"
+                    href="https://www.wikipedia.org/"
+                    target="_blank"> Privacy Policy.</a>
+                </label>
+              </div>
+              <p class="user__validation">Please accept our
+                Terms and Conditions and Privacy Policy to
+                proceed</p>
+
+              <div class="btn align-item">
+                <!-- <button class="btn--com btn__login">LOGIN</button> -->
+                <button class="btn--com
+                  btn__create-account">CREATE
+                  ACCOUNT</button>
+                <div>
+                  <span class="btn-login--lbl"> Have Already
+                    an
+                    Account?</span>
+                  <a class="btn-login--already" href="#">Login
+                    Here</a>
+                </div>
+              </div>
+              <div class="social-label">
+                <hr>
+                <span class="social-heading">Or Create With</span>
+                <hr>
+              </div>
+              <div class="link-align">
+                <a href="https://www.facebook.com/">
+                  <img class="social-img"
+                    src="./images/facebook.png">
+                </a>
+                <a href="https://mail.google.com/">
+                  <img class="social-img"
+                    src="./images/gmail.png">
+                </a>
+                <a href="https://www.linkedin.com/">
+                  <img class="social-img"
+                    src="./images/linkedin.png">
+                </a>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
 </html>

@@ -39,6 +39,7 @@ let users = JSON.parse(localStorage.getItem("users")) || [];
 // signup page function
 
 function saveData(e) {
+  e.preventDefault();
   let fFname = firstName.value;
   let lLname = lastname.value;
   let userpnumber = phonenumber.value;
@@ -47,11 +48,31 @@ function saveData(e) {
   let userpassword = password.value;
   let usercpassword = cpassword.value;
   let useractivationcode = activationcode.value;
-  e.preventDefault();
+
+  const min = 11,
+    max = 12;
+  const isBetween = (length, min, max) =>
+    length < min || length >= max ? false : true;
+
+  //  password start
+  const isPasswordSecure = (password) => {
+    const re = new RegExp(
+      "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,25})"
+    );
+    return re.test(password);
+  };
+
+  //  password end check
+
   if (isNaN(parseInt(userpnumber))) {
     alert("not valid phone number ");
     return false;
   }
+  if (!isBetween(userpnumber.length, min, max)) {
+    alert("number less or greater than 11 digits  ");
+    return false;
+  }
+
   if (uname.length <= 0) {
     alert("user name is required");
     return false;
@@ -65,8 +86,10 @@ function saveData(e) {
     return false;
   }
 
-  if (userpassword.length <= 0) {
-    alert("user password is required");
+  if (!isPasswordSecure(userpassword)) {
+    alert(
+      "Password must has at least 8 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)"
+    );
     return false;
   }
   if (usercpassword.length <= 0) {
@@ -113,12 +136,13 @@ function openfield(e) {
 // login page functions
 
 function getData(e) {
-  // e.preventDefault();
+  e.preventDefault();
   let users = JSON.parse(localStorage.getItem("users"));
 
-  let activeUser = users.find((u) => u.pnumber === loginnumber.value);
-
-  // console.log(activeUser.todos[0]);
+  let activeUser = users.find(
+    (u) => u.pnumber === loginnumber.value || u.email == loginnumber.value
+  );
+  console.log(activeUser.email);
 
   if (activeUser) {
     if (activeUser.password === loginpassword.value) {
@@ -134,6 +158,7 @@ function getData(e) {
   } else {
     alert("User deos not exist.");
   }
+  document.querySelector("form").reset();
 }
 
 // click event
