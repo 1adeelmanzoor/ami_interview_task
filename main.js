@@ -57,7 +57,7 @@ function saveData(e) {
   //  password start
   const isPasswordSecure = (password) => {
     const re = new RegExp(
-      "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,25})"
+      "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,25}$)"
     );
     return re.test(password);
   };
@@ -113,6 +113,7 @@ function saveData(e) {
 
     localStorage.setItem("users", JSON.stringify(users));
     alert("successfully sign up");
+    window.location.href = "index.html";
   }
 }
 function closefield() {
@@ -146,8 +147,9 @@ function getData(e) {
 
   if (activeUser) {
     if (activeUser.password === loginpassword.value) {
-      // alert("login"); //2
+      alert("successfully login"); //2
       localStorage.setItem("activeUser", JSON.stringify(activeUser)); //3
+
       setTimeout(function () {
         window.location.href = "dashboard.html";
       });
